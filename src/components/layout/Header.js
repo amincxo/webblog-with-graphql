@@ -5,7 +5,7 @@ import BookIcon from "@mui/icons-material/Book"
 
 function Header() {
   return (
-    <AppBar position='stiky' >
+    <AppBar position='sticky' >
         <Container maxWidth="lg" >
             <Toolbar>
                 <Typography component="h1" variant='h5' fontWeight="bold" flex={1}> 
