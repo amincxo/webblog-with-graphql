@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ApolloClient , ApolloProvider , InMemoryCache } from '@apollo/client';
 
-import './index.css';
+import './styles/index.css';
+import './styles/fonts.css';
 import App from './App';
+import { ThemeProvider } from '@mui/material';
+import theme from './mui/theme';
 
 
 const client = new ApolloClient({
@@ -15,6 +18,8 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ApolloProvider client={client} >
-        <App />
+        <ThemeProvider theme={theme} >
+            <App />
+        </ThemeProvider>
     </ApolloProvider>
 );
