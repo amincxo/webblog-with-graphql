@@ -4,7 +4,7 @@ import Header from './components/layout/Header';
 
 const QUERY = gql`
  query {
-    author {name }
+    author 
  }
 `;
 

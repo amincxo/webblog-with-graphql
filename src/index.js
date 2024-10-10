@@ -10,7 +10,7 @@ import theme from './mui/theme';
 
 
 const client = new ApolloClient({
-    uri: "https://eu-west-2.cdn.hygraph.com/content/cm21w3htm03vj07w0450zf3l3/master",
+    uri: process.env.REACT_APP_GRAPHCMS_URI,
     cache: new InMemoryCache(),
 })
 
