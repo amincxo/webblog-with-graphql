@@ -1,5 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import './App.css';
+import Header from './components/layout/Header';
 
 const QUERY = gql`
  query {
@@ -11,7 +12,7 @@ function App() {
     const {data , loading} = useQuery(QUERY);
     console.log({data, loading})
   return (
-    <h1>app</h1>
+    <Header/>
   );
 }
 
