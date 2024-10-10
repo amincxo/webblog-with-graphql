@@ -4,13 +4,15 @@ import Header from './components/layout/Header';
 
 const QUERY = gql`
  query {
-    author 
+    authors {
+        name
+        }
  }
 `;
 
 function App() {
     const {data , loading} = useQuery(QUERY);
-    console.log({data, loading})
+    console.log(data)
   return (
     <Header/>
   );
