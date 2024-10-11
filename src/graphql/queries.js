@@ -47,9 +47,9 @@ const GET_AUTHOR_INFO = gql`
         html
         }
         post {
-        coverPhoto {
+            coverPhoto {
             url
-        }
+            }
         id
         slug
         title
