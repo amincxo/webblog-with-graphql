@@ -5,6 +5,7 @@ import { GET_AUTHOR_INFO } from '../../graphql/queries';
 import { Avatar, Container, Grid, Typography } from '@mui/material';
 import sanitizeHtml from 'sanitize-html';
 import CardEl from '../shared/CardEl';
+import Loader from '../shared/Loader';
 
 function AuthorPage() {
     const {slug} = useParams();
@@ -14,7 +15,7 @@ function AuthorPage() {
             slug
         }
     })
-    if(loading) return<h3>در حال بارگزاری</h3>;
+    if(loading) return<Loader />
     if (error) return <h3>متاسفانه زمان بارگزاری دیتا به مشکل برخورد کردیم</h3>
 
     const {author: {name ,field ,avatar ,description, post}} = data;

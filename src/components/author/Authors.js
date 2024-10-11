@@ -4,12 +4,13 @@ import { useQuery } from '@apollo/client'
 import { GET_AUTHORS_INFO } from '../../graphql/queries'
 import { Avatar, Divider, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Loader from '../shared/Loader';
 
 
 function Authors() {
     const {loading , data , error} = useQuery(GET_AUTHORS_INFO);
 
-    if(loading) return <h3>درحال بارگزاری نویسندگان</h3>
+    if(loading) return <Loader />
 
     if(error) return <h3> متاسفانه زمان گرفتن اطلاعات به مشکل خوردیم </h3>
 

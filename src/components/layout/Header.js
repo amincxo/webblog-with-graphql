@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Container, Toolbar, Typography } from '@mui/material'
 import BookIcon from "@mui/icons-material/Book"
+import { Link } from 'react-router-dom'
 
 
 function Header() {
@@ -11,7 +12,9 @@ function Header() {
                 <Typography component="h1" variant='h5' fontWeight="bold" flex={1}> 
                     وبلاگ شخصی امین 
                 </Typography>
-                <BookIcon />
+                <Link to="/" style={{textDecoration:"none"}} >
+                    <BookIcon />
+                </Link>
             </Toolbar>
         </Container>
     </AppBar>
