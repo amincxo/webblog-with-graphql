@@ -24,7 +24,7 @@ function BlogPage() {
   return (
     <Container maxWidth="lg" >
         <Grid container >
-            <Grid item xs={12} mt={9} display="flex" justifyContent="space-around" >
+            <Grid item xs={12} mt={9} display="flex" justifyContent="space-between" >
                 <Typography component="h2" variant='h4' color='primary' fontWeight={700}  >
                     {data.post.title}
                 </Typography>
